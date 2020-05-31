@@ -4,81 +4,122 @@
         <title>
             Google
         </title>
-        
+
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
         <style>
             html {
-                font-family: 'Noto Sans JP', sans-serif;
-            }
+                font-family: 'arial', sans-serif}
 
             .small {
                 font-size: 11px;
             }
 
             .midspace {
-                margin-bottom: 10px;
+                margin-bottom: 20px;
             }
 
-            .spread {
-                justify-content: space-between;
-            }
+            /* .spread {
+                display: flex;
+                justify-content: flex-end;
+            } */
 
-            #navbar {
+
+            nav {
                 position: fixed;
+                width: 100%;
                 top: 0px;
                 left: 0px;
-                padding: 20px;
+                padding: 16px;
+                display: flex;
             }
-            
+
+
+            .left {
+                margin-left: 0px;
+            }
+
+            .right {
+                margin-left: 1300px;
+                display: flex;
+            }
+
+            #signin {
+                background-color: rgb(66, 133, 244);
+                color: white;
+                border-radius: 3px;
+                border-color:rgb(66, 133, 244);
+                font-weight: bold;
+                height: 30px;
+                width: 70px;
+                text-shadow: none;
+            }
+
+            .srchbtn {
+                border: none;
+                padding: 10px 20px 10px 20px;
+            }
+
+            .muted {
+                color: #5f6368;
+            }
             .focal {
                 text-align: center;
                 margin-top: 155px;
             }
 
+            .smoov {
+                border-radius: 15px;
+                height: 35px;
+                width: 540px;
+            }
+
             #foot {
-                position: fixed;
+                /* position: fixed; */
                 bottom: 0px;
                 padding: 20px;
                 left: 0px;
                 display: grid;
                 grid-template-rows: 25px 25px;
+                background-color: #F2f2f2;
             }
         </style>
-    </head>    
-    
+    </head>
+
     <body>
         <nav id="navbar" class="small">
-            About Store Gmail Images
+
+                <div class="left">
+                    <p>About Store</p>
+                </div>
+                <div class="right">
+                    <p>Gmail Images</p>
+                    <a href="https://www.google.ca/intl/en/about/products?tab=wh" role="button"></a>
+                    <button id="signin" >Sign in</button>
+                </div>
         </nav>
 
         <div class="focal">
             <img class="midspace" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
             <form>
-                <input class="midspace" type="text">
+                <input class="midspace smoov" type="text">
                 <div class="midspace">
-                    <input type="submit" value="Google Search">
-                    <input type="button" value="I'm feeling lucky">
+                    <input type="submit" class="srchbtn muted" value="Google Search">
+                    <input type="submit" class="srchbtn muted" value="I'm feeling lucky">
                 </div>
-            </form>
-            <form class="small">
-                Google offered in: <a href=#>Français</a>
             </form>
         </div>
 
-        <footer id="foot">
-            <div>Canada</div>
-            <div class='spread'>
-                <div>
-                    Advertising 
-                    Business 
-                    How Search Works
-                </div>
-                <div>
-                    Privacy 
-                    Terms 
-                    Settings
-                </div>
+        <footer class="spread" id="foot">
+            <div class="left muted">
+                Advertising
+                Business
+                How Search Works
+            </div>
+            <div class="right muted">
+                Privacy
+                Terms
+                Settings
             </div>
         </footer>
     </body>
