@@ -19,29 +19,14 @@
                 margin-bottom: 20px;
             }
 
-            /* .spread {
-                display: flex;
-                justify-content: flex-end;
-            } */
-
-
-            nav {
-                position: fixed;
-                width: 100%;
-                top: 0px;
-                left: 0px;
-                padding: 16px;
-                display: flex;
-            }
-
-
             .left {
-                margin-left: 0px;
+                display: grid;
+                grid-template-columns: auto auto auto;
             }
 
             .right {
-                margin-left: 1300px;
-                display: flex;
+                display: grid;
+                grid-template-columns: auto auto auto;
             }
 
             #signin {
@@ -70,32 +55,53 @@
 
             .smoov {
                 border-radius: 15px;
+                /* border-width: 1px;
+                border-color: rgb(223, 225, 229); */
+                border: 1px solid rgb(223, 225, 229);
                 height: 35px;
                 width: 540px;
             }
 
-            #foot {
-                /* position: fixed; */
-                bottom: 0px;
-                padding: 20px;
+            .bar {
+                position: absolute;
                 left: 0px;
-                display: grid;
-                grid-template-rows: 25px 25px;
+                right: 0px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            #head {
+                top: 0px;
+                height: 12px;
+                padding: 12px;
+            }
+
+            #foot {
+                bottom: 0px;
+                height: 12px;
+                padding: 12px;
                 background-color: #F2f2f2;
+            }
+
+            .marg {
+                margin-left: 20px;
+                margin-right: 20px;
             }
         </style>
     </head>
 
     <body>
-        <nav id="navbar" class="small">
+        <nav class="small bar" id="head">
 
                 <div class="left">
-                    <p>About Store</p>
+                    <div class="marg">About</div>
+                    <div class="marg">Store</div>
                 </div>
                 <div class="right">
-                    <p>Gmail Images</p>
-                    <a href="https://www.google.ca/intl/en/about/products?tab=wh" role="button"></a>
-                    <button id="signin" >Sign in</button>
+                    <div class="marg">Gmail</div>
+                    <div class="marg">Images</div>
+                    <button class="marg" id="signin" >Sign in</button>
                 </div>
         </nav>
 
@@ -110,16 +116,16 @@
             </form>
         </div>
 
-        <footer class="spread" id="foot">
+        <footer class="bar" id="foot">
             <div class="left muted">
-                Advertising
-                Business
-                How Search Works
+                <div class="marg">Advertising</div>
+                <div class="marg">Business</div>
+                <div class="marg">How Search Works</div>
             </div>
             <div class="right muted">
-                Privacy
-                Terms
-                Settings
+                <div class="marg">Privacy</div>
+                <div class="marg">Terms</div>
+                <div class="marg">Settings</div>
             </div>
         </footer>
     </body>
