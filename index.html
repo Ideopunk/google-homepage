@@ -8,35 +8,79 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
         <style>
+            
+            a {
+                /* color: #5f6368; */
+                text-decoration: none;
+            }
+
+            a.topp {
+                color: black;
+            }
+            
+            a:hover {
+                text-decoration: underline;
+            }
+
             html {
                 font-family: 'arial', sans-serif}
+
+            .bar {
+                position: absolute;
+                left: 0px;
+                right: 0px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                /* align-items: center; */
+            }
+
+            .colmn {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+            }
+
+            .focal {
+                text-align: center;
+                margin-top: 155px;
+            }
+
+            .form {
+                position: relative;
+                left: 8px;
+            }
+
+            .icon {
+                position: relative;
+                top: 5px;
+            }
+
+            .marg {
+                margin-left: 15px;
+                margin-right: 10px;
+            }
 
             .midspace {
                 margin-bottom: 22px;
             }
 
-            .left {
-                display: grid;
-                grid-template-columns: auto auto auto;
+            .muted {
+                color: #5f6368;
             }
 
-            .right {
-                display: grid;
-                grid-template-columns: auto auto auto auto;
+            .smoov {
+                border-radius: 22px;
+                border: 1px solid rgb(223, 225, 229);
+                height: 41px;
+                width: 565px;
+                text-indent: 50px;
             }
 
-            #signin {
-                background-color: rgb(66, 133, 244);
-                color: white;
-                border-radius: 3px;
-                border-color:rgb(66, 133, 244);
-                font-weight: bold;
-                border-width: 1px;
-                height: 30px;
-                width: 70px;
-                position: relative;
-                top: -9px;
-            }
+            .smoov:hover {
+                box-shadow: 1px 1px 10px -6px;
+            } 
+
+
 
             .srchbtn {
                 border: none;
@@ -53,46 +97,9 @@
 
             }
 
-            .muted {
-                color: #5f6368;
-            }
-            .focal {
-                text-align: center;
-                margin-top: 155px;
-            }
-
-            .smoov {
-                border-radius: 22px;
-                border: 1px solid rgb(223, 225, 229);
-                height: 41px;
-                width: 565px;
-            }
-
-            input.smoov:hover {
-                box-shadow: 1px 1px 10px -6px;
-            }
-
-            .form {
+            #apps {
                 position: relative;
-                left: 8px;
-            }
-
-            .bar {
-                position: absolute;
-                left: 0px;
-                right: 0px;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                /* align-items: center; */
-            }
-
-            #head {
-                top: 10px;
-                height: 12px;
-                padding: 10px;
-                color: #000000;
-                font-size: 12px;
+                top: -5px;
             }
 
             #foot {
@@ -103,28 +110,12 @@
                 font-size: 13px;
             }
 
-            .marg {
-                margin-left: 15px;
-                margin-right: 10px;
-            }
-
-            a {
-                /* color: #5f6368; */
-                text-decoration: none;
-            }
-
-            a.topp {
-                color: black;
-            }
-            
-
-            a:hover {
-                text-decoration: underline;
-            }
-            
-            .icon {
-                position: relative;
-                top: 5px;
+            #head {
+                top: 10px;
+                height: 12px;
+                padding: 10px;
+                color: #000000;
+                font-size: 12px;
             }
 
             #mag {
@@ -135,10 +126,19 @@
                 left: -60px;
             }
 
-            #apps {
+            #signin {
+                background-color: rgb(66, 133, 244);
+                color: white;
+                border-radius: 3px;
+                border-color:rgb(66, 133, 244);
+                font-weight: bold;
+                border-width: 1px;
+                height: 30px;
+                width: 70px;
                 position: relative;
-                top: -5px;
+                top: -9px;
             }
+
 
         </style>
     </head>
@@ -146,11 +146,11 @@
     <body>
         <nav class="toptext bar" id="head">
 
-                <div class="left">
+                <div class="colmn">
                     <div class="marg"><a href='#' class="topp">About</a></div>
                     <div class="marg"><a href='#' class="topp">Store</a></div>
                 </div>
-                <div class="right">
+                <div class="colmn">
                     <div class="marg"><a href='#' class="topp">Gmail</a></div>
                     <div class="marg"><a href='#' class="topp">Images</a></div>
                     <input type="image" title="Google apps" width="23" height="23" id="apps" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS6ZURQh1NVShkwc8v1yEn9yJ5M3XibwxoBejA9-SRdI_XDlHdk&usqp=CAU">
@@ -172,12 +172,12 @@
         </div>
 
         <footer class="bar" id="foot">
-            <div class="left">
+            <div class="colmn">
                 <div class="marg"><a href='#' class="muted">Advertising</a></div>
                 <div class="marg"><a href='#' class="muted">Business</a></div>
                 <div class="marg"><a href='#' class="muted">How Search Works</a></div>
             </div>
-            <div class="right">
+            <div class="colmn">
                 <div class="marg"><a href='#' class="muted">Privacy</a></div>
                 <div class="marg"><a href='#' class="muted">Terms</a></div>
                 <div class="marg"><a href='#' class="muted">Settings</a></div>
