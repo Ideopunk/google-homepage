@@ -11,12 +11,8 @@
             html {
                 font-family: 'arial', sans-serif}
 
-            .small {
-                font-size: 11px;
-            }
-
             .midspace {
-                margin-bottom: 20px;
+                margin-bottom: 22px;
             }
 
             .left {
@@ -26,7 +22,7 @@
 
             .right {
                 display: grid;
-                grid-template-columns: auto auto auto;
+                grid-template-columns: auto auto auto auto;
             }
 
             #signin {
@@ -35,15 +31,22 @@
                 border-radius: 3px;
                 border-color:rgb(66, 133, 244);
                 font-weight: bold;
+                border-width: 1px;
                 height: 30px;
                 width: 70px;
-                text-shadow: none;
+                position: relative;
+                top: -9px;
             }
 
             .srchbtn {
                 border: none;
-                padding: 10px 20px 10px 20px;
+                padding: 10px 15px 10px 15px;
+                border-radius: 3px;
             }
+
+            /* input.srchbtn:hover {
+
+            } */
 
             .muted {
                 color: #5f6368;
@@ -54,12 +57,14 @@
             }
 
             .smoov {
-                border-radius: 15px;
-                /* border-width: 1px;
-                border-color: rgb(223, 225, 229); */
+                border-radius: 20px;
                 border: 1px solid rgb(223, 225, 229);
-                height: 35px;
-                width: 540px;
+                height: 41px;
+                width: 565px;
+            }
+
+            input.smoov:hover {
+                box-shadow: 1px 1px 10px -6px;
             }
 
             .bar {
@@ -69,12 +74,15 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                /* align-items: center; */
             }
 
             #head {
-                top: 0px;
+                top: 10px;
                 height: 12px;
-                padding: 12px;
+                padding: 10px;
+                color: #000000;
+                font-size: 12px;
             }
 
             #foot {
@@ -82,50 +90,88 @@
                 height: 12px;
                 padding: 12px;
                 background-color: #F2f2f2;
+                font-size: 13px;
             }
 
             .marg {
                 margin-left: 20px;
                 margin-right: 20px;
             }
+
+            a {
+                /* color: #5f6368; */
+                text-decoration: none;
+            }
+
+            a.topp {
+                color: black;
+            }
+            
+
+            a:hover {
+                text-decoration: underline;
+            }
+            
+            .icon {
+                position: relative;
+                top: 5px;
+            }
+
+            #mag {
+                left: -560px;
+                /* opacity: 50%; */
+            }
+
+            #mic {
+                left: -60px;
+            }
+
+            #apps {
+                position: relative;
+                top: -3px;
+            }
+
         </style>
     </head>
 
     <body>
-        <nav class="small bar" id="head">
+        <nav class="toptext bar" id="head">
 
                 <div class="left">
-                    <div class="marg">About</div>
-                    <div class="marg">Store</div>
+                    <div class="marg"><a href='#' class="topp">About</a></div>
+                    <div class="marg"><a href='#' class="topp">Store</a></div>
                 </div>
                 <div class="right">
-                    <div class="marg">Gmail</div>
-                    <div class="marg">Images</div>
-                    <button class="marg" id="signin" >Sign in</button>
+                    <div class="marg"><a href='#' class="topp">Gmail</a></div>
+                    <div class="marg"><a href='#' class="topp">Images</a></div>
+                    <input type="image" title="Google apps" width="23" height="23" id="apps" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS6ZURQh1NVShkwc8v1yEn9yJ5M3XibwxoBejA9-SRdI_XDlHdk&usqp=CAU">
+                    <button class="marg" id="signin" class="topp">Sign in</button>
                 </div>
         </nav>
 
         <div class="focal">
             <img class="midspace" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
             <form>
-                <input class="midspace smoov" type="text">
+                <input class="midspace smoov" type="text" title="Search">
+                <image width="17" height="17" class="icon" id="mag" src="https://i.dlpng.com/static/png/91009_preview.png">
+                <input type="image" width="15" height="20" class="icon" id="mic" title="Search by voice" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAACFCAMAAAAOwgSzAAAA1VBMVEX///9ChfTqQzX7vAU0qFO90PsvfPTo9OslpUodo0T7uAD93qPzqKPqQDHpNCP7tQDpOirw9P46gfTpLRjpODbznpl/qPfj6/0ZdfMlePP97u3whoDymZT74N71sa3tZlz8wgAYrlXL2vuivvlflfVMivTT4Pxpmvawx/r3+f5WkPXa5fz/+e391o7tbGT4ycb+8troHAD2u7jrVUqTgUWodkK4az/FZkJ1ofb7wC38xkn+7c351NL8yl796L780HSUtfj94bDvenPuYwvvbi/o2tFxjELyTvalAAAD30lEQVRoge2Za1fiMBCGQ1lxZW0NzYJAC3VFrgoIqCsu3tjV//+TNqFcMknahpYvuyfvx5A+Hd7JTM+ZIKSry1blqp1rX1Val9rPaKrzWC24bo7JdQvVx84h2YNaSN7IrQ0Oxq8I7JBfOQj7PCezV/zceXZ4p6CGM35md64LUWyqwnU2eCky8DD6UiZ6N4HezQLvxfmy8qaXHp7gS0ZvWhr0Vlp4P5HN1E9Jv0xynamQtqdVko2h1qTsCP2BljODdNaUdIyh1qQ7Ndc1LXotXTvQSmrqtB5p0o8M3dAN3dAN3dAN3dAN3dAN3dAN3dAN3dD/c/o3XjeZ6fVTTk00L+50dstvTDX9WUycnWboKb9T8Re/MdXkauFYW9kBeubpL/zGkiYdTN3GPH2EXnn6O7+x39ait8HEcMrTPTTk6UOQ8DTTTh/v6LiM3osc/hns1Do0woEc2Ry9iV54ehHsTDNl5kK3yBjdnvF0cCTRm8aE/A080eBstyZ1hAAdpFVnVivMaZuAThf4A59/AntRK/FmQhju87bT447AockXQS9IHmMLA+w6Hzo9MkhIK7QGnSfc2QjXZcAYsmBLvPH5Odwe32ykAfOMM2ZlOwK9QGg1KPbQS72XbwOWvVytgXoS84pQx424RZSv+UDoZBouAmtgJ2MqdVXtrNaV7gxA6GtjEGhksvPMnZxwUekWcoovksWHjr316i0Mfig/h44G1a1BrlsdqL52Pgy9sVkHBSW2g40/vUq7Vq1Wa+1KT3mP0iA8fFVKoV5A8Pm86uFQMbc/wBdrstj9Mof052hGpEYYhD7jfvoFgy++7g33gOkgdKGiIjIbpzIwnX1Red3A4C9++3vBfQhfdXZeQ75gL/58J56ao5QnwMmpuGMO4JbljFQcpUbQc5jSUDtvVnBabPZCQZK1sDGES74wbQ79Gk5DIDrm+8QW4PRjrdBrEcCpHDxNYE+x4Ap9KCKmZwHO4pjF8aczIrItHJmvJxHO7LHKDeXmRtmSTKFwOaMb3cxFOOM7k8AXElxf+MHEkdkUrsjo9qmZmP/wBZiQwPObY6am7wWEYAU6AU7xgZSl7RuwQ5gcrCZTOUEcm2kZhU+Ws0yCqw6wnmxSTobTj69UfDrCtrKIZNVHe4dvk1FsPoGm1n7uO1ZSUcPwPUffHux4+oGHaiw1+dhZqos5ge/ZqnIEoju8NGymejMgMS+wHRKc7usJ/APlANOyF19h0+aAg4j+tt8Lxl5gsfrfiPYEK/DGB0CvVf/4vLt/+Mn0cH/3+ZHJD1nHJz92Ojk+LBwdf/2yk6EbuqEbuqEb+j9L/wvI5GqrBNKWkQAAAABJRU5ErkJggg==">
                 <div class="midspace">
                     <input type="submit" class="srchbtn muted" value="Google Search">
-                    <input type="submit" class="srchbtn muted" value="I'm feeling lucky">
+                    <input type="submit" class="srchbtn muted" value="I'm Feeling Lucky">
                 </div>
             </form>
         </div>
 
         <footer class="bar" id="foot">
-            <div class="left muted">
-                <div class="marg">Advertising</div>
-                <div class="marg">Business</div>
-                <div class="marg">How Search Works</div>
+            <div class="left">
+                <div class="marg"><a href='#' class="muted">Advertising</a></div>
+                <div class="marg"><a href='#' class="muted">Business</a></div>
+                <div class="marg"><a href='#' class="muted">How Search Works</a></div>
             </div>
-            <div class="right muted">
-                <div class="marg">Privacy</div>
-                <div class="marg">Terms</div>
-                <div class="marg">Settings</div>
+            <div class="right">
+                <div class="marg"><a href='#' class="muted">Privacy</a></div>
+                <div class="marg"><a href='#' class="muted">Terms</a></div>
+                <div class="marg"><a href='#' class="muted">Settings</a></div>
             </div>
         </footer>
     </body>
